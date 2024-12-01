@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "swiper/swiper-bundle.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  @apply bg-cyberorange text-black w-10 h-10 flex items-center justify-center cursor-pointer;
+  position: absolute;
+  z-index: 50 !important;
+  bottom: 0px;
+}
+
+.swiper-button-next-custom {
+  right: 20px; /* Adjust the spacing from the right */
+}
+
+.swiper-button-prev-custom {
+  right: 80px; /* Adjust spacing to separate from the next button */
+}
+
+.slider-container {
+  @apply !pb-20; /* Add padding to the bottom of the container */
+  position: relative !important;
+}
+.slider-about .swiper-pagination-progressbar {
+  position: absolute;
+  top: 440px !important; /* Position below the navigation arrows */
+  left: -10% !important; /* Center horizontally with some padding */
+  width: 100% !important; /* Make it slightly smaller than the slider width */
+  z-index: 40;  /*Ensure it appears below the arrows*/
+}
+.swiper-pagination-progressbar {
+  @apply !bg-black h-1; /* Black progress bar background */
+  position: absolute;
+  top: 340px !important; /* Position below the navigation arrows */
+  left: 5% !important; /* Center horizontally with some padding */
+  width: 80% !important; /* Make it slightly smaller than the slider width */
+  z-index: 40; /* Ensure it appears below the arrows */
+}
+
+.swiper-pagination-progressbar-fill {
+  @apply !bg-cyberorange h-1; /* Orange progress indicator */
+}
+
+.newsletter .swiper-pagination-progressbar {
+  @apply !bg-white h-1; /* Black progress bar background */
+  position: absolute;
+  top: 640px !important; /* Position below the navigation arrows */
+  left: -10% !important; /* Center horizontally with some padding */
+  width: 100% !important; /* Make it slightly smaller than the slider width */
+  z-index: 40; /* Ensure it appears below the arrows */
+}
+
+.newsletter .swiper-pagination-progressbar-fill {
+  @apply !bg-cyberorange h-1; /* Orange progress indicator */
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.marquee {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee-scroll 10s linear infinite;
+}
+
+/* Keyframes for horizontal scrolling */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-content img {
+  margin-right: 20px; /* Spacing between images */
+}
