@@ -4,6 +4,8 @@ import React from "react";
 import NewsletterHero from "../elements/NewsletterHero";
 import NewsletterCardComponent from "../elements/NewsletterCardComponent";
 import NewsletterSlider from "../elements/NewsletterSlider";
+import CoverIndustry from "../CoverIndustry";
+
 
 
 export default function Newsletter() {
